@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPulse — Our Planet, Our Responsibility</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky-nav">
+        <div class="container nav-container">
+            <a href="#" class="logo-group">
+                <div class="logo-icon">
+                    <i data-lucide="leaf"></i>
+                </div>
+                <span class="logo-text">EcoPulse</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#threats" class="nav-link">Threats</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#take-action" class="nav-link">Take Action</a>
+                <a href="#take-action" class="btn-cta">Join the Movement</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="menu-toggle-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-drawer" class="mobile-drawer hidden">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#threats" class="mobile-link">Threats</a>
+            <a href="#solutions" class="mobile-link">Solutions</a>
+            <a href="#take-action" class="mobile-link">Take Action</a>
+            <a href="#take-action" class="btn-cta mobile-cta">Join the Movement</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">
+                        <i data-lucide="leaf"></i> EcoPulse Initiative
+                    </span>
+                    <h1 class="hero-title">
+                        Our Planet, <br>
+                        <span class="accent-text italic">Our Responsibility.</span>
+                    </h1>
+                    <p class="hero-description">
+                        The earth does not belong to us; we belong to the earth. Join EcoPulse in defending natural ecosystems, countering plastic pollution, and creating a sustainable tomorrow.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#take-action" class="btn-cta btn-large">
+                            Join the Movement <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#threats" class="btn-outline">Explore the Threats</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Core Threats Section -->
+        <section id="threats" class="threats-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">The Crisis</span>
+                    <h2 class="section-title">The Core Threats</h2>
+                    <p class="section-description">
+                        Human activities have pushed our planet to its limits. Understanding these core threats is the first crucial step toward taking meaningful action.
+                    </p>
+                </div>
+
+                <div class="threats-grid">
+                    <!-- Threat 1: Climate Change -->
+                    <div class="threat-card group">
+                        <div class="card-inner">
+                            <div class="icon-wrapper bg-destructive-light">
+                                <i data-lucide="flame" class="text-destructive"></i>
+                            </div>
+                            <h3 class="card-title">Climate Change</h3>
+                            <p class="card-text">
+                                Rising greenhouse gas emissions trap heat in the atmosphere, leading to extreme weather events, melting glaciers, and rapidly rising sea levels worldwide.
+                            </p>
+                        </div>
+                        <a href="https://climate.nasa.gov/" target="_blank" rel="noopener noreferrer" class="card-link">
+                            Learn More <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Threat 2: Plastic Pollution -->
+                    <div class="threat-card group">
+                        <div class="card-inner">
+                            <div class="icon-wrapper bg-accent-light">
+                                <i data-lucide="trash-2" class="text-accent"></i>
+                            </div>
+                            <h3 class="card-title">Plastic Pollution</h3>
+                            <p class="card-text">
+                                Over 380 million tons of plastic are produced annually, with millions of tons ending up in oceans, destroying marine life and entering the global food chain.
+                            </p>
+                        </div>
+                        <a href="https://www.unep.org/plastic-pollution" target="_blank" rel="noopener noreferrer" class="card-link">
+                            Learn More <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Threat 3: Deforestation -->
+                    <div class="threat-card group">
+                        <div class="card-inner">
+                            <div class="icon-wrapper bg-primary-light">
+                                <i data-lucide="tree-pine" class="text-primary"></i>
+                            </div>
+                            <h3 class="card-title">Deforestation</h3>
+                            <p class="card-text">
+                                Farming, logging, and expansion destroy vast forest areas, removing crucial carbon sinks and threatening 80% of terrestrial biodiversity.
+                            </p>
+                        </div>
+                        <a href="https://www.worldwildlife.org/threats/deforestation-and-forest-degradation" target="_blank" rel="noopener noreferrer" class="card-link">
+                            Learn More <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contrast Graphic Illustration -->
+                <div class="contrast-banner">
+                    <div class="contrast-img-container">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663720484468/MXZ6ZNW5xdw4XAGcQ3LokF/threats-illustration-K8xrxcpEcWkgHirT3sTiCi.webp" alt="Environmental contrast of clean vs polluted world" class="contrast-img">
+                    </div>
+                    <div class="contrast-content">
+                        <h3 class="contrast-title">The Point of No Return</h3>
+                        <p class="contrast-text">
+                            Scientists warn that we are approaching critical tipping points. Failing to act now risks permanent changes to our climate, food supplies, and natural habitats. The choice is ours to make.
+                        </p>
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="dot bg-destructive"></span>
+                                <span class="stat-label">1.5°C Warming Limit</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="dot bg-accent"></span>
+                                <span class="stat-label">11M Tons Ocean Plastic/Yr</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="dot bg-primary"></span>
+                                <span class="stat-label">10M Hectares Deforested/Yr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Solutions Section -->
+        <section id="solutions" class="solutions-section">
+            <div class="container">
+                <div class="solutions-grid">
+                    <div class="solutions-content">
+                        <span class="section-badge">The Path Forward</span>
+                        <h2 class="section-title">Daily Solutions</h2>
+                        <p class="section-description">
+                            Big changes start with small habits. Explore the essential practices you can adopt today to reduce your environmental footprint and lead an eco-conscious life.
+                        </p>
+
+                        <!-- Accordion Container -->
+                        <div class="accordion">
+                            <!-- Accordion Item 1 -->
+                            <div class="accordion-item active" data-index="0">
+                                <button class="accordion-trigger">
+                                    <div class="trigger-title">
+                                        <i data-lucide="trash-2" class="text-accent"></i>
+                                        <span>Reduce & Reuse</span>
+                                    </div>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Cut down on single-use items. Bring reusable bags, coffee cups, and water bottles wherever you go. Buy in bulk to reduce packaging waste, and choose products made from recycled materials.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 2 -->
+                            <div class="accordion-item" data-index="1">
+                                <button class="accordion-trigger">
+                                    <div class="trigger-title">
+                                        <i data-lucide="droplets" class="text-accent"></i>
+                                        <span>Conserve Water</span>
+                                    </div>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Fix leaks immediately, install low-flow showerheads, and turn off the tap while brushing your teeth. Collect rainwater for garden plants and run washing machines only with full loads.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 3 -->
+                            <div class="accordion-item" data-index="2">
+                                <button class="accordion-trigger">
+                                    <div class="trigger-title">
+                                        <i data-lucide="sun" class="text-accent"></i>
+                                        <span>Switch to Renewable Energy</span>
+                                    </div>
+                                    <i data-lucide="chevron-down" class="chevron-icon"></i>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Support solar, wind, or geothermal power providers. Unplug appliances when not in use to eliminate 'vampire' energy draw, and upgrade to energy-efficient LED light bulbs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="solutions-graphic">
+                        <div class="blob-bg"></div>
+                        <div class="graphic-img-container">
+                            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663720484468/MXZ6ZNW5xdw4XAGcQ3LokF/solutions-illustration-ccAX5pkCCz9ZDre5ggpge4.webp" alt="Eco solutions concept illustration with plant and clean energy" class="solutions-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pledge Form (Take Action) Section -->
+        <section id="take-action" class="action-section">
+            <div class="action-bg-decor-1"></div>
+            <div class="action-bg-decor-2"></div>
+            <div class="container action-container">
+                <div class="action-info">
+                    <span class="badge bg-white-opacity">
+                        <i data-lucide="heart" class="text-accent"></i> Join Us
+                    </span>
+                    <h2 class="action-title">
+                        Make Your Pledge <br>
+                        <span class="accent-text italic">For the Future.</span>
+                    </h2>
+                    <p class="action-description">
+                        Real environmental progress relies on collective action. Join thousands of citizens worldwide by making a concrete pledge to adopt sustainable daily habits.
+                    </p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="globe" class="text-accent"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Global Community</h4>
+                                <p>Connect with eco-conscious individuals and share sustainable practices.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="leaf" class="text-accent"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Direct Impact</h4>
+                                <p>Every pledge helps prevent waste, reduce emissions, and conserve resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-form-container">
+                    <div class="form-card">
+                        <h3 class="form-title">The Eco-Pledge</h3>
+                        <form id="pledge-form" class="pledge-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" placeholder="Jane Doe" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" placeholder="jane@example.com" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pledge" class="form-label">Select Your Pledge</label>
+                                <select id="pledge" class="form-select">
+                                    <option value="plastic">I pledge to eliminate single-use plastics.</option>
+                                    <option value="water">I pledge to reduce my daily water waste.</option>
+                                    <option value="energy">I pledge to switch off unused electronics.</option>
+                                    <option value="diet">I pledge to eat more plant-based meals.</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-submit">Submit Pledge</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Clean Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <a href="#" class="logo-group mb-4">
+                    <div class="logo-icon">
+                        <i data-lucide="leaf"></i>
+                    </div>
+                    <span class="logo-text">EcoPulse</span>
+                </a>
+                <p class="footer-description">
+                    Empowering communities to make sustainable choices, protect biodiversity, and restore natural ecosystems for a thriving future.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h5 class="footer-heading">Quick Links</h5>
+                <ul class="links-list">
+                    <li><a href="#home" class="footer-link">Home</a></li>
+                    <li><a href="#threats" class="footer-link">Threats</a></li>
+                    <li><a href="#solutions" class="footer-link">Solutions</a></li>
+                    <li><a href="#take-action" class="footer-link">Take Action</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h5 class="footer-heading">Follow the Movement</h5>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                </div>
+                <p class="footer-note">
+                    Receive monthly eco-tips and updates on global conservation efforts.
+                </p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p class="copyright">&copy; 2026 EcoPulse. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#" class="legal-link">Privacy Policy</a>
+                <a href="#" class="legal-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

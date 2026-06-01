@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Font families */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  /* Sage & Clay Theme Palette */
+  --primary: oklch(0.28 0.05 140); /* Deep Forest Green */
+  --primary-foreground: oklch(0.97 0.01 140); /* Soft Sage White */
+  
+  --radius: 1rem; /* Softer, organic rounded corners */
+  --background: oklch(0.98 0.01 140); /* Very soft Sage White background */
+  --foreground: oklch(0.2 0.02 140); /* Dark Forest Green for text */
+  
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.02 140);
+  
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.02 140);
+  
+  --secondary: oklch(0.92 0.02 140); /* Sage Accent background */
+  --secondary-foreground: oklch(0.28 0.05 140);
+  
+  --muted: oklch(0.95 0.01 140);
+  --muted-foreground: oklch(0.45 0.02 140);
+  
+  --accent: oklch(0.62 0.15 45); /* Terracotta accent color */
+  --accent-foreground: oklch(0.99 0.01 45);
+  
+  --destructive: oklch(0.55 0.18 28);
+  --destructive-foreground: oklch(0.98 0.01 28);
+  
+  --border: oklch(0.88 0.02 140);
+  --input: oklch(0.88 0.02 140);
+  --ring: oklch(0.28 0.05 140);
+  
+  --sidebar: oklch(0.98 0.01 140);
+  --sidebar-foreground: oklch(0.2 0.02 140);
+  --sidebar-accent: oklch(0.92 0.02 140);
+  --sidebar-accent-foreground: oklch(0.28 0.05 140);
+  --sidebar-border: oklch(0.88 0.02 140);
+  --sidebar-ring: oklch(0.28 0.05 140);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, .font-serif {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
+}
+
+/* Custom micro-interactions and organic styling */
+.organic-shape {
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+}
+
+.organic-shape-alt {
+  border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+}
+
+/* Underline animation for links */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Elegant transition overrides */
+.smooth-transition {
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
